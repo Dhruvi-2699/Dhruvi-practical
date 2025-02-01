@@ -38,6 +38,10 @@ const UpdateStatusFrom = ({ packageId, setOpen, updateStatus, currentLoaction })
             Status
           </Text>
           <select
+          style={{border: '1px solid black',
+            borderRadius: '5px',
+            width: '100%',
+            padding: '8px'}}
             id="updateStatus"
             name="updateStatus"
             onChange={formik.handleChange}
