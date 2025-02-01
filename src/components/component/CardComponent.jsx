@@ -12,18 +12,17 @@ const CardComponent = () => {
       <Text fontWeight={"bold"}>NO:#123</Text>
       <Text>From:#123</Text>
       <Text>To:#123</Text>
-      <Badge p={3}>Shipped</Badge>
+      <Badge borderRadius={'10px'} backgroundColor={'yellow'} p={3}>Shipped</Badge>
     </Box>
-    <Box>
-    <Text fontWeight={"bold"}>CURRENT LOCATION</Text>
+    <Box alignContent={'center'}>
+    <Text fontWeight={"bold"}>CURRENT LOCATION : </Text>
     <Text>Vadodara</Text>
     </Box>
     <Box>
-      <Button mb={1}>Update Status</Button>
+      <Button mb={1}  color={'black'} size="sm" fontWeight={500} backgroundColor={'darkgray'} border={'2px solid black'}>Update Status</Button>
       <br />
-      <Button>Update Location</Button>
+      <Button  color={'black'} size="sm" fontWeight={500} backgroundColor={'darkgray'} border={'2px solid black'}>Update Location</Button>
     </Box>
-   
          </Flex>
   )
 }
