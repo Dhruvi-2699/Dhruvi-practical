@@ -20,7 +20,6 @@ const UpdateStatusFrom = ({ packageId, setOpen, updateStatus, currentLoaction })
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
       const payload = { packageId, updateValue: values };
       dispatch(UpdateStatus(payload));
       setOpen(false)
@@ -53,18 +52,6 @@ const UpdateStatusFrom = ({ packageId, setOpen, updateStatus, currentLoaction })
             <option value={"In-Transit"}>In-Transit</option>
             <option value={"Delivered"}>Delivered</option>
           </select>
-          {/* <Input
-            id="sender"
-            name="sender"
-            type="text"
-            placeholder="Enter your name"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.sender}
-            variant="outline"
-            size="md"
-            mb={1}
-          /> */}
           <Text fontSize={"small"} color={"red"}>
             {formik.errors.updateStatus}
           </Text>
