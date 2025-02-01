@@ -1,29 +1,23 @@
-import { Badge, Box, Button, Container, Flex, Text } from "@chakra-ui/react";
+import { Container, Flex, Text } from "@chakra-ui/react";
+import { useSelector } from "react-redux";
+import CardComponent from "./components/component/CardComponent";
+import { PopupComponent } from "./components/component/PopupComponent";
 function App() {
+  const { packageList } = useSelector((state) => state.packageList);
+
   return (
-    <Container mt={5}>
-      <Flex justifyContent={"space-between"}>
+    <Container my={10} overflow={'hidden'}>
+      <Flex justifyContent={"space-between"} alignItems={'center'}>
         <Text fontSize={"4xl"}>Package List</Text>
-        <Button>Add New Package</Button>
+        <PopupComponent />
       </Flex>
-      <Flex
-        borderBottom={"1px solid #FFF"}
-        mt={5}
-        py={2}
-        justifyContent={"space-between"}
-      >
-        <Box>
-          <Text fontWeight={"bold"}>NO:#123</Text>
-          <Text>From:#123</Text>
-          <Text>To:#123</Text>
-          <Badge p={3}>Shipped</Badge>
-        </Box>
-        <Box>
-          <Button mb={1}>Add New Package</Button>
-          <br />
-          <Button>Add New Package</Button>
-        </Box>
-      </Flex>
+      {packageList?.length > 0 &&
+        packageList?.map((packageData) => (
+          <CardComponent
+            key={packageData.packageId}
+            packageData={packageData}
+          />
+        ))}
     </Container>
   );
 }
