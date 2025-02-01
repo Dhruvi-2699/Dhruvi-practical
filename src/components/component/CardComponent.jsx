@@ -1,6 +1,8 @@
-import { Badge, Box, Button, Flex, Text } from '@chakra-ui/react'
+import { Badge, Box, Button, Flex, Text } from '@chakra-ui/react';
 
 const CardComponent = () => {
+   
+    
   return (
     <Flex
     borderBottom={"1px solid #FFF"}

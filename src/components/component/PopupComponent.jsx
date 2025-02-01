@@ -8,6 +8,7 @@ import {
     DialogTrigger
 } from "@/components/ui/dialog"
 import { Button } from '@chakra-ui/react'
+import AddPackageForm from "./AddPackageForm"
 export const PopupComponent = () => {
   return (
     <DialogRoot size="cover" placement="center" motionPreset="slide-in-bottom">
@@ -22,9 +23,7 @@ export const PopupComponent = () => {
           <DialogCloseTrigger />
         </DialogHeader>
         <DialogBody>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          {/* <AddPackageForm /> */}
+          <AddPackageForm />
         </DialogBody>
       </DialogContent>
     </DialogRoot>
